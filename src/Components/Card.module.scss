@@ -1,0 +1,19 @@
+.wrapper {
+    width: 200px;
+    height: 200px;
+    background-color: white;
+    text-align: center;
+    overflow: hidden;
+    transition: 0.2s;   
+
+    &:hover {
+        cursor: pointer;
+        scale: 1.05;
+        transition: 0.2s;
+    }
+}
+
+.image {
+    height: 90%;
+    width: 100%;
+}
