@@ -1,13 +1,11 @@
 import React from "react";
 import s from "../Components/Card.module.scss";
 
-const Card = ({ image, name }) => {
-
-
+const Card = ({ image, name, handler, id }) => {
   return (
-    <div className={s.wrapper}>
-      <img className={s.image} src={image} alt="image" />
-      <h2>{name}</h2>
+    <div id={id} className={s.wrapper}>
+      <img className={s.image} src={image} alt="image" id={id} />
+      <h2 className={s.name}>{name}</h2>
     </div>
   );
 };

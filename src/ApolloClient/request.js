@@ -13,4 +13,17 @@ export const ALL_CHARACTERS = gql`
   }
 `;
 
-
+export const GET_CHARACTER = gql`
+  query getCharacter($id: ID!) {
+    character(id: $id) {
+      id
+      image
+      name
+      status
+      episode {
+        name
+        episode
+      }
+    }
+  }
+`;

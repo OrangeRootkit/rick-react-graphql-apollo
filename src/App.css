@@ -2,6 +2,7 @@
   background-color: teal;
   padding: 50px;
   text-align: center;
+  min-height: 100vh;
 }
 
 .title {

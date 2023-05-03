@@ -2,6 +2,7 @@ import React from "react";
 import Card from "../Components/Card";
 import s from "./CharactersList.module.scss";
 import { useCharacters } from "../hooks/useCharacters";
+import { Link } from "react-router-dom";
 
 const CharactersList = () => {
   const { loading, error, data } = useCharacters();
@@ -14,7 +15,9 @@ const CharactersList = () => {
   return (
     <div className={s.wrapper}>
       {arr.map((el) => (
-        <Card image={el.image} name={el.name} />
+        <Link key={el.id} className={s.link} to={`/${el.id}`}>
+          <Card key={el.id} image={el.image} name={el.name} id={el.id} />
+        </Link>
       ))}
     </div>
   );
